@@ -40,7 +40,7 @@
                 <Frame Margin="5">
                     <VerticalStackLayout>
                         <Label Text="Quantidade de Participantes:" FontSize="17" />
-                        <Entry x:Name="qnt_Participantes" Placeholder="Insíra a Quantidade de Participantes!"/>
+                            <Entry x:Name="qnt_Participantes" Placeholder="Insíra a Quantidade de Participantes!" HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Frame>
 
