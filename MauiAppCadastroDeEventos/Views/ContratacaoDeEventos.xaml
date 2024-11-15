@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroDeEventos.Views.ContratacaoDeEventos"
+             Title="ContratacaoDeEventos"
+             BackgroundColor="Black">
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+        <Label Text="Cadastro de Eventos"
+               FontSize="38" TextColor="White"/>
+
+        <Frame Padding="10" BackgroundColor="{StaticResource Gray500}" BorderColor="{StaticResource Gray500}">
+            <VerticalStackLayout>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Nome do Evento:" FontSize="17" />
+                            <Entry x:Name="nome_evento" Placeholder="Insira o Nome do Evento!"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Padding="10" Margin="5">
+                    <VerticalStackLayout>
+                        
+                        <Label Text="Data de Início e Término do Evento:" FontSize="17" Margin="5"/>
+                        
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Início:"/>
+                            <DatePicker x:Name="dtpck_inicio" Format="dd/MM/yyyy" Margin="5"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Término:"/>
+                            <DatePicker x:Name="dtpck_termino" Format="dd/MM/yyyy" Margin="5"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Quantidade de Participantes:" FontSize="17" />
+                        <Entry x:Name="qnt_Participantes" Placeholder="Insíra a Quantidade de Participantes!"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <Frame Margin="5">
+                    <VerticalStackLayout>
+                        <Label Text="Local do Evento:" FontSize="17" />
+                        <Entry x:Name="local_evento" Placeholder="Insíra o endereço do Local do Evento!"/>
+                    </VerticalStackLayout>
+                </Frame>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Custo por Participante:" FontSize="17" />
+                            <Entry x:Name="custo_participante" Placeholder="EX: R$20,00"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button x:Name="btn_cad_concluido" Text="Concluir Cadastro" 
+                Clicked="btn_avancar_Clicked_1" Margin="10" 
+                HorizontalOptions="Center" 
+                BackgroundColor="{StaticResource Gray500}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

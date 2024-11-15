@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroDeEventos.Views.EventoCadastrado"
+             Title="EventoCadastrado"
+             BackgroundColor="Black">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+
+        <Label Text="Cadastro Concluído" FontSize="38" TextColor="White"/>
+
+            <Frame Margin="5" Padding="10" BackgroundColor="{StaticResource Gray500}" BorderColor="{StaticResource Gray500}">
+            <VerticalStackLayout>
+                <Frame Margin="5">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Nome do Evento:" FontSize="17"/>
+                        <Label Text="nome_do_evento" FontSize="17"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="5">
+                        <Grid ColumnDefinitions="*, *, *" RowDefinitions="Auto, Auto" >
+                            
+                            <Label Grid.Row="0" Grid.Column="0" Text="Início:"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="Término:"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="Duração:"/>
+
+                            <Label Grid.Row="1" Grid.Column="0" Text="25/12/2024"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="01/01/2025"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="7 Dias"/>
+                            
+                        </Grid>
+                </Frame>
+
+                <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Quantidade de Participantes:" FontSize="17"/>
+                            <Label Text="1000" FontSize="17"/>
+                        </VerticalStackLayout>  
+                </Frame>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Local do Evento:" FontSize="17"/>
+                            <Label Text="Rua AAAAA, 000, UF" FontSize="17"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Custo Por Participante:" FontSize="17"/>
+                            <Label Text="20,00" FontSize="17"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame Margin="5">
+                        <VerticalStackLayout>
+                            <Label Text="Valor Total do Evento:" FontSize="17"/>
+                            <Label Text="10.000" FontSize="17"/>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                </VerticalStackLayout>
+        </Frame>
+
+            <Button Text="Voltar" BackgroundColor="{StaticResource Gray500}"
+                    x:Name="btn_voltar" Margin="10"
+                    HorizontalOptions="Center" Clicked="btn_voltar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
