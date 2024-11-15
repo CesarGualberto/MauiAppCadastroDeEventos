@@ -16,6 +16,6 @@ public partial class EventoCadastrado : ContentPage
         catch (Exception ex)
         {
             DisplayAlert("Ops!", ex.Message, "Ok");
-        }
+        }   
     }
 }

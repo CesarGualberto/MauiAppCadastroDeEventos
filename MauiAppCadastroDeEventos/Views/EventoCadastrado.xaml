@@ -15,7 +15,7 @@
                 <Frame Margin="5">
                     <StackLayout Orientation="Vertical">
                         <Label Text="Nome do Evento:" FontSize="17"/>
-                        <Label Text="nome_do_evento" FontSize="17"/>
+                        <Label Text="{Binding NomeDoEvento}" FontSize="17"/>
                     </StackLayout>
                 </Frame>
 
@@ -26,9 +26,9 @@
                             <Label Grid.Row="0" Grid.Column="1" Text="Término:"/>
                             <Label Grid.Row="0" Grid.Column="2" Text="Duração:"/>
 
-                            <Label Grid.Row="1" Grid.Column="0" Text="25/12/2024"/>
-                            <Label Grid.Row="1" Grid.Column="1" Text="01/01/2025"/>
-                            <Label Grid.Row="1" Grid.Column="2" Text="7 Dias"/>
+                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                            <Label Grid.Row="1" Grid.Column="2" Text="{Binding DuracaoEvento}"/>
                             
                         </Grid>
                 </Frame>
@@ -36,28 +36,28 @@
                 <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Quantidade de Participantes:" FontSize="17"/>
-                            <Label Text="1000" FontSize="17"/>
+                            <Label Text="{Binding QntParticipantes}" FontSize="17"/>
                         </VerticalStackLayout>  
                 </Frame>
 
                     <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Local do Evento:" FontSize="17"/>
-                            <Label Text="Rua AAAAA, 000, UF" FontSize="17"/>
+                            <Label Text="{Binding LocalEvento}" FontSize="17"/>
                         </VerticalStackLayout>
                     </Frame>
 
                     <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Custo Por Participante:" FontSize="17"/>
-                            <Label Text="20,00" FontSize="17"/>
+                            <Label Text="{Binding CustoParticipante,  StringFormat='{}{0:c}'}" FontSize="17"/>
                         </VerticalStackLayout>
                     </Frame>
 
                     <Frame Margin="5">
                         <VerticalStackLayout>
                             <Label Text="Valor Total do Evento:" FontSize="17"/>
-                            <Label Text="10.000" FontSize="17"/>
+                            <Label Text="{Binding CustoEvento,  StringFormat='{}{0:c}'}" FontSize="17"/>
                         </VerticalStackLayout>
                     </Frame>
 
